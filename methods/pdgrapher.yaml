@@ -13,7 +13,7 @@ Method: PDGrapher
 Model:
 - GNN
 Publication: https://pmc.ncbi.nlm.nih.gov/articles/PMC10802439/
-Published: false
+Published: true
 Task:
 - Combinatorial Effect Prediction
 - Unseen Perturbation Prediction
