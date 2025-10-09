@@ -1,15 +1,15 @@
 Code Availability: https://github.com/bioFAM/scDoRI
 Description: scDoRI is an autoencoder framework that infers enhancer-mediated gene regulatory networks (eGRNs) from single-cell RNA-seq and ATAC-seq data.
-            Its encoder maps multi-omic profiles into a shared, low-dimensional "topic" space, representing each cell as a mixture of regulatory programmes.
-            A mechanistically constrained four-module decoder then reconstructs distinct components of the original data.
-            These modules ATAC-seq counts to identify co-accessible peak patterns (Module 1),
-            predict gene expression from chromatin accessibility and learn enhancer-gene links (Module 2),
-            and model co-expressed transcription factors (TFs) via TF expression reconstruction (Module 3). 
-            This information (Modules 1-3) is then integrated to reconstruct RNA counts,
-             while inferring signed GRNs that distinguish between activators and repressors (Module 4). 
-            The model is trained using a two-phase process to ensure stability: 
-            an initial phase learns a robust latent space with the core reconstruction modules (1-3),
-            followed by a second phase that trains the eGRN inference module (Module 4).
+                Its encoder maps multi-omic profiles into a shared, low-dimensional "topic" space, representing each cell as a mixture of regulatory programmes.
+                A mechanistically constrained four-module decoder then reconstructs distinct components of the original data.
+                These modules ATAC-seq counts to identify co-accessible peak patterns (Module 1),
+                predict gene expression from chromatin accessibility and learn enhancer-gene links (Module 2),
+                and model co-expressed transcription factors (TFs) via TF expression reconstruction (Module 3). 
+                This information (Modules 1-3) is then integrated to reconstruct RNA counts,
+                while inferring signed GRNs that distinguish between activators and repressors (Module 4). 
+                The model is trained using a two-phase process to ensure stability: 
+                an initial phase learns a robust latent space with the core reconstruction modules (1-3),
+                followed by a second phase that trains the eGRN inference module (Module 4).
 Inspired by:
 - DiffTF
 - GRaNIE
