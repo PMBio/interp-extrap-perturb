@@ -1,0 +1,23 @@
+Code Availability: https://github.com/azizilab/amici
+Description: "AMICI uses multi-headed cross-attention to model how receiver cells
+ integrate information from spatial neighbors by generating query embeddings (Q)
+ from learned cell-type-specific parameters that represent receiver identity, while neighboring non-self cells
+ gene expression profiles generate keys (K) and values (V) through neural network embeddings. 
+ Attention scores are computed as distance-weighted softmax over query-key products, 
+ where each head learns distinct interaction length scales and sender phenotypes,
+ with the model reconstructing masked receiver expression as a residual from cell-type mean
+ using attention-weighted aggregations of neighbor values. Sparsity-inducing penalties on attention weights
+ and value matrices ensure only biologically relevant non-self neighbors contribute."
+Inspired by:
+- 'Attention Mechanisms'
+Method: AMICI
+Model:
+- Linear Decoder
+- Cross-attention
+- Spatially-informed
+Publication: https://www.biorxiv.org/content/10.1101/2025.09.22.677860v1.full.pdf
+Published: true
+Task:
+- Linear Gene Programmes
+- Multi-component Disentanglement
+Year: 2025
