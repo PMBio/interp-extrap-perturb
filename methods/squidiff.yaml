@@ -4,7 +4,7 @@ Description: "Squidiff pairs a semantic encoder with a conditional Denoising Dif
  control and perturbed states in the latent space. It then predicts responses in new cell types by
  applying this vector using latent arithmetic (addition) to the new cell's latent representation.
  Similarly, it generates transient states in continuous processes like differentiation by interpolating along start and end points.
- Finally, it integrates an adaptor to encode chemical structures, enabling predictions for completely unseen drugs."
+ Finally, it integrates an adaptor to encode chemical structures, enabling predictions for unseen drugs."
 Inspired by:
 - Denoising diffusion implicit models
 Method: Squidiff
