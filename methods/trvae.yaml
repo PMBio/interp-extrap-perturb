@@ -1,9 +1,9 @@
 Code Availability: github.com/theislab/trvae
-Description: 'trVAE is conditional variational autoencoder, 
+Description: 'trVAE is a conditional variational autoencoder, 
               which applies Maximum Mean Discrepancy regularization to the first layer of its decoder.
               This forces the model to learn condition-invariant features,
               enabling it to transform samples between conditions and predict OOD responses,
-              such as cell-type specific response to seen perturbations. '
+              such as unseen cell-type specific response to seen perturbations. '
 Inspired by:
 - DAN
 - Moment Matching Networks
