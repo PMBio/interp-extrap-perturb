@@ -15,8 +15,6 @@
 
 This directory contains **individual YAML files** for each computational method in our catalog. Each file represents one method with its complete metadata and description, making it easy for contributors to add new methods or edit existing ones.
 
-> 💡 **Why individual files?** This structure makes contributions easier, reduces merge conflicts, and allows for better organization and maintenance.
-
 ---
 
 ## 🏗️ **File Structure**
@@ -25,7 +23,7 @@ Each method file follows this standardized structure:
 
 ```yaml
 # 📝 Basic Information
-Method: Method Name                    # The official method name
+Method: Method Name                    # The proposed method name
 Year: 2024                            # Publication year
 Published: true                        # Publication status (true/false)
 

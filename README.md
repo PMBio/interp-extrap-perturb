@@ -10,17 +10,18 @@
 ## 🎯 **Overview**
 
 A **living catalogue** 📚 of computational methods that attempt to identify mechanistic cause‑and‑effect links and predict responses in unobserved settings.
-The project curates **> 100 peer‑reviewed and pre‑print tools**, classifies them by task, and provides a browsable web interface with informative tables and technical descriptions.
+The project curates **> 100 tools**, classifies them by task, and provides a browsable web interface with informative tables and technical descriptions.
 
 ---
 
 
 ## 🔗 **Quick Access**
 
-| 🎯 **Resource**              | 🌐 **URL**                                                                                     |
+| **Resource**              | **URL**                                                                                     |
 | ----------------------------- | ---------------------------------------------------------------------------------------------- |
-| 📖 **Documentation**         | [https://interp-extrap-perturb.readthedocs.io/](https://interp-extrap-perturb.readthedocs.io/) |
-| 🤝 **Contribute**            | [Contribution Guidelines](docs/source/contribute.rst) - *Add your method!*                   |
+| **Manuscript** | Interpretation, extrapolation and perturbation of single cells, [*Nat Rev Genet* (2026)](https://doi.org/10.1038/s41576-025-00920-4) |
+| **Documentation**         | [https://interp-extrap-perturb.readthedocs.io/](https://interp-extrap-perturb.readthedocs.io/) |
+| **Contribute**            | [Contribution Guidelines](docs/source/contribute.rst) - *Add your method!*                   |
 
 ---
 
@@ -35,21 +36,18 @@ We welcome contributions! 🎉 Whether you want to:
 
 👉 **Get Started**: Check our [📋 Contribution Guidelines](docs/source/contribute.rst) for detailed instructions.
 
----
 
 ## 🔄 Data flow
+Automated data flow from `methods/` YAML files to the rendered documentation site, as follows:
 
-```
-methods.yaml ─▶ generate_methods.py ─▶ docs/methods*.rst ─▶ Sphinx ▶ Read the Docs
-```
-
-1. **`methods.yaml`** — canonical metadata (method, year, tasks, code link, …).
-2. **`generate_methods.py`** converts YAML → ReStructuredText via Jinja2:
+1. **`methods/*.yaml`** — canonical metadata (method, year, tasks, code link, …).
+2. **`generate_methods.py`** converts YAMLs → ReStructuredText via Jinja2:
 
    * One overview page (`methods.rst`).
    * One page per task (slugified).
      Tasks are listed in `tasklist.txt`; unknown tasks raise a warning.
-3. Sphinx + *sphinx‑book‑theme* renders the site; ReadTheDocs rebuilds on each push.
+3. Sphinx + *sphinx‑book‑theme* renders the site; 
+4. ReadTheDocs rebuilds the Website on each push.
 
 ---
 
@@ -81,13 +79,10 @@ graph LR
 4. **🚀 Auto-Deployment** — ReadTheDocs rebuilds on each push to `main`
 
 
-## 📄 **Citation & License**
+## 📄 Citation
 
-If you use this catalog in your research, please cite our perspective paper *(under review)*.
+Dimitrov*, D., Schrod*, S., Rohbeck, M., and Stegle, O. Interpretation, extrapolation and perturbation of single cells. *Nat Rev Genet* (2026). https://doi.org/10.1038/s41576-025-00920-4
 
-**License**: MIT © 2025 Daniel Dimitrov, Stefan Schrod, Martin Rohbeck & Oliver Stegle
-
----
 
 ## License
 
