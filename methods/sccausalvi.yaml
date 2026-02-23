@@ -6,14 +6,17 @@ Description: |
   scCausalVI is a causality-aware generative model that disentangles inherent cellular heterogeneity from treatment-induced effects in perturbational single-cell RNA-seq data. It encodes structural causal model (SCM) principles into a deep variational inference framework, learning two distinct but interrelated latent factor sets: background factors capturing intrinsic cellular states and treatment effect factors encoding condition-specific transcriptional changes. A Squeeze-and-Excitation Networks (SENet) attention mechanism adaptively scales treatment effects per cell, enabling cell-state-specific response modeling at single-cell resolution. When batch information is available, scCausalVI simultaneously disentangles batch effects, treatment effects, and baseline cellular states in multi-source data integration. Through cross-condition in silico prediction, scCausalVI predicts gene expression profiles under hypothetical scenarios by intervening on condition assignments within the SCM. This enables identification of treatment-responsive cells via permutation-based significance testing, as well as identification of susceptible versus resistant subpopulations by computationally projecting treated cells back to untreated states. Downstream differential expression and pathway analyses on these virtual cells identified subpopulations reveal molecular signatures and regulatory mechanisms underlying differential cellular responses, facilitating the discovery of therapeutic targets and mechanistic drivers of disease susceptibility.
   
 Model:
-  - Deep Latent Structural Model
+  - Variational Autoencoder
   - Structural Causal Model
 
 Task:
-  - Perturbation effect estimation
-  - Counterfactual prediction
-  - Data integration across batches and conditions
-  - Disentanglement
+  - Causal Structure
+  - Unsupervised Disentanglement
+  - Seen Perturbation Prediction
+  - Context Transfer
+  - Multi-component Disentanglement
+  - Perturbation Responsiveness
+  - Differential Analysis
 
 Publication: https://doi.org/10.1016/j.cels.2025.101443
 Code Availability: https://github.com/ShaokunAn/scCausalVI
