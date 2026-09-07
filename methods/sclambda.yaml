@@ -1,0 +1,35 @@
+Code Availability: https://github.com/gefeiwang/scLAMBDA
+Description: 'scLAMBDA (LAnguage Model-assisted emBedding-Disentangled Autoencoder) predicts
+  single-cell transcriptional responses to single- and multi-gene genetic perturbations by
+  conditioning a VAE on language model-derived gene embeddings. Each target gene is represented
+  by a pretrained embedding (GenePT by default; scGPT, HyenaDNA and DNABERT-2 embeddings are also evaluated),
+  and two-gene perturbations are represented as the sum of the individual gene embeddings.
+  A cell encoder maps expression to a basal latent state, while a perturbation encoder maps the gene
+  embedding to a salient representation of the same dimensionality; the decoder reconstructs expression
+  from their sum, i.e. the perturbation acts as an additive shift in the latent space.
+  Disentanglement of the basal and salient variables is enforced by an auxiliary decoder that reconstructs
+  the gene embedding from the salient representation, and by minimising the mutual information
+  between the two using a MINE estimator. To avoid overfitting to the sparse set of training perturbations,
+  adversarial examples of the perturbation embeddings are generated with the fast gradient sign method
+  and used during training, which improves generalisation to unseen genes and gene combinations.
+  After training, scLAMBDA performs in silico perturbation of individual cells or generates
+  perturbed cell populations, which are used to identify up-/down-regulated genes and to predict
+  genetic interaction scores for unseen gene pairs.'
+Inspired by:
+- GenePT
+- CPA
+- GenePert
+Method: scLAMBDA
+Model:
+- VAE
+- LLM Gene Embeddings
+- Additive Shift
+- Mutual information (MINE) disentanglement
+- Adversarial perturbation embeddings
+Publication: https://www.biorxiv.org/content/10.1101/2024.12.04.626878v1
+Published: false
+Task:
+- Unseen Perturbation Prediction
+- Combinatorial Effect Prediction
+- Multi-component Disentanglement
+Year: 2024

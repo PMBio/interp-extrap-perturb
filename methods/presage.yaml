@@ -1,0 +1,29 @@
+Code Availability: https://github.com/Genentech/PRESAGE
+Description: PRESAGE (Perturbation Response EStimation with Aggregated Gene Embeddings)
+  predicts the pseudobulk transcriptional response to unseen single-gene perturbations
+  by representing each perturbed gene through a collection of precomputed, prior knowledge-derived
+  gene embeddings, rather than through perturbation-specific parameters.
+  Embedding sources include knowledge graphs (GO, Reactome, STRING; embedded with node2vec),
+  language- and protein-model embeddings (GenePT, BioGPT, scGPT, ESM2), and PCA-compressed
+  tabular screens (e.g., DepMap CRISPR gene effects and Perturb-seq from other cell systems).
+  Each source is passed through a source-specific MLP into a shared latent space, and the sources
+  are aggregated via softmax-normalised learnable weights combined with a graph-attention pooling layer,
+  such that the learned weights indicate which knowledge source drives a prediction.
+  A linear readout outputs the log fold change of every gene relative to control and the model is
+  trained with a mean squared error loss. Alongside standard regression metrics, the authors propose
+  functional evaluations (e.g., ranking of effect sizes, phenocopy recall, and gene-set score shifts),
+  and show that Perturb-seq-derived embeddings from other cell systems are the most informative source.
+Inspired by:
+- GEARS
+- scGPT
+- GenePT
+Method: PRESAGE
+Model:
+- MLP
+- Attention-based pooling of embedding sources
+- PK Representations
+Publication: https://www.biorxiv.org/content/10.1101/2025.06.03.657653v1
+Published: false
+Task:
+- Unseen Perturbation Prediction
+Year: 2025

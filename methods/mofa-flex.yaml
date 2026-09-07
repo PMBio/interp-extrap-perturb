@@ -1,0 +1,37 @@
+Code Availability: https://github.com/bioFAM/mofaflex
+Description: MOFA-FLEX generalises MOFA+ into a modular Bayesian matrix factorisation framework in which
+             multi-view and multi-group data are decomposed into view-specific weights and group-specific
+             factors, with the model composed from interchangeable modules. Each view can be assigned a
+             Normal, Bernoulli or Negative Binomial likelihood, and the priors on both weights and factors
+             can be chosen from Normal, Laplace, MOFA-style ARD/spike-and-slab or a regularised horseshoe
+             (the default), with optional non-negativity constraints applied independently to factors and weights.
+             Spatial or temporal covariates enter through MEFISTO's Gaussian Process factor prior, fitted with
+             sparse variational GPs, while SOFA-style guided factors link individual factors to continuous,
+             binary or categorical sample covariates through auxiliary regression likelihoods. Following MuVI,
+             prior knowledge enters by scaling the horseshoe prior on the weights per feature and factor, such that
+             pre-assigned gene sets (e.g., Hallmark, Reactome) define informed factors whose non-member genes
+             are shrunk towards zero but can still be recovered by the data, while uninformed factors absorb
+             residual (e.g., batch) variation. All components are trained jointly with stochastic variational
+             inference, and MOFA, MEFISTO and NSF are recovered as special cases.
+Inspired by:
+- MOFA+
+- MEFISTO
+- MuVI
+- SOFA
+- NSF
+Method: MOFA-FLEX
+Model:
+- Group Factor Model
+- Multi-modal
+- PK Representations
+- Spatially-informed
+- Time-resolved
+- Gaussian Process priors
+- Stochastic Variational Inference
+Publication: https://www.biorxiv.org/content/10.1101/2025.11.03.686250v1
+Published: false
+Task:
+- Linear Gene Programmes
+- Unsupervised Disentanglement
+- Multi-component Disentanglement
+Year: 2025

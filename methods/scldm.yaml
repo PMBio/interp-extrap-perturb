@@ -1,0 +1,34 @@
+Code Availability: https://github.com/czi-ai/scldm
+Description: scLDM is a two-stage latent diffusion model that generates single-cell gene expression
+  profiles while treating each cell as an unordered set of expressed genes. In the first stage, a
+  transformer-based VAE embeds each non-zero count together with a learned gene-ID embedding and
+  compresses the variable-length set into a fixed number of latent tokens via a Multi-head
+  Cross-Attention Block with learnable pseudoinputs, which acts as permutation-invariant
+  pooling in the encoder and, with gene embeddings as queries, as permutation-equivariant unpooling
+  in the decoder; the decoder parameterises a per-gene negative binomial likelihood.
+  In the second stage, the Gaussian prior is replaced by a latent diffusion model in which a
+  Diffusion Transformer (DiT) denoiser is trained with a flow matching loss over the latent tokens.
+  Conditioning on cell context (e.g., cell type or cell line) and perturbation identity (e.g., cytokine
+  or gene knockout) is handled jointly via multi-attribute classifier-free guidance, with conditions
+  randomly dropped during training so that a single model supports unconditional, conditional and guided sampling.
+  scLDM is evaluated on (cell-type-)conditional generation of observational data and on generating
+  expression profiles for held-out cytokines and knockouts within a fixed cell context.
+Inspired by:
+- Latent Diffusion Models
+- DiT / SiT
+- Set Transformer / Perceiver
+- CFGen
+Method: scLDM
+Model:
+- Transformer VAE
+- Multi-head Cross-Attention pooling
+- NB likelihood
+- Latent Diffusion
+- Conditional Flow Matching
+- Classifier-free Guidance
+Publication: https://arxiv.org/abs/2511.02986
+Published: false
+Task:
+- Unseen Perturbation Prediction
+- Context Transfer
+Year: 2025
